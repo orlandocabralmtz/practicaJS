@@ -83,13 +83,13 @@ console.log(persona)  */
 
 /************LA TAREA ************/
 
-var clima = prompt("como esta el clima?")
+var clima = prompt("Como esta el clima? (Calor, Lluvioso o Frio)")
 if (clima == "lluvia") {
-	var intensidadLluvia = prompt("Llueve mucho")
+	var intensidadLluvia = prompt("Llueve mucho?")
 
 	if (intensidadLluvia == "si") {
 
-		var inundacion = prompt("tu colonia ya se inundó") //mover esta parte antes de si es necesario salir
+		var inundacion = prompt("tu colonia ya se inundó?") //mover esta parte antes de si es necesario salir
 		if (inundacion == "si") {
 
 			var salirLluvia = prompt("Es necesario salir?")
