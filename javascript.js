@@ -169,7 +169,9 @@ if (clima == "lluvia") {
     alert(alerta)
 } else
 	alert(alerta)
-} 
+    setInterval("location.reload()",10000); 
+}
+
     
 
 
