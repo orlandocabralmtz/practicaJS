@@ -72,8 +72,7 @@ console.log(persona)  */
 
 /********************************************************* */
 // var nombre = prompt("dame tu nombre")
-// document.write(nombre)
-
+// document.write(nombre){
 
 /********con este codigo obtebgo el valor deun input de HTML */
 // function recibir(){
@@ -82,65 +81,96 @@ console.log(persona)  */
 // }
 
 /************LA TAREA ************/
-
-var clima = prompt("Como esta el clima? (Calor, Lluvioso o Frio)")
+function start(){
+var outfit ="Este es tu outfit"
+var alerta = "escribe algo valido"
+var clima = prompt("Como esta el clima? (Calor, Lluvia o Frio)")
 if (clima == "lluvia") {
-	var intensidadLluvia = prompt("Llueve mucho?")
-
+	var intensidadLluvia = prompt("Llueve mucho? (si/no)")
 	if (intensidadLluvia == "si") {
-
-		var inundacion = prompt("tu colonia ya se inundó?") //mover esta parte antes de si es necesario salir
+		var inundacion = prompt("Tu colonia ya se inundó? (si/no)") //mover esta parte antes de si es necesario salir
 		if (inundacion == "si") {
-
-			var salirLluvia = prompt("Es necesario salir?")
+			var salirLluvia = prompt("Es necesario salir? (si/no)")
 			if (salirLluvia == "si") {
-				document.write("Este es tu outfit")
+				alert(outfit)
 				//  document.write("<img src='https://thumbs.dreamstime.com/b/un-monje-budista-joven-guarda-el-sonre%C3%ADr-mientras-que-%C3%A9l-est%C3%A1-remando-su-barco-en-una-calle-inundada-de-bangkok-tailandia-la-ma-112493066.jpg'")
 				document.write("<img src='https://thumbs.dreamstime.com/b/un-monje-budista-joven-guarda-el-sonre%C3%ADr-mientras-que-%C3%A9l-est%C3%A1-remando-su-barco-en-una-calle-inundada-de-bangkok-tailandia-la-ma-112493066.jpg'>")
-
-			} else //else para inundación
+			} else if(salirLluvia =="no"){ //else para inundación
+                alert(outfit)
 				document.write("<img src='https://www.seguroscatalanaoccidente.com/blog/assets/multimedia/2020/03/Tuberi%CC%81a-rota-y-casa-inundada.jpg'>")
-
-		} else //else para salirLluvia
+              }
+              else 
+              alert("escribe algo valido porfa")
+		} else if(inundacion =="no") { //else para salirLluvia
+            alert(outfit)
 			document.write("<img src='https://image.made-in-china.com/155f0j00wMmRtyLGbgkY/Oxford-Cloth-2-Person-Motorcycle-Poncho-Raincoat.jpg'>")
-	} else //else de intensidad
+        }
+        else
+        alert(alerta)
+	} else if (intensidadLluvia=="no"){
+        alert(outfit)
 		document.write("<img src='https://thumbs.dreamstime.com/b/persona-con-paraguas-camina-por-la-lluvia-cruza-una-calle-h%C3%BAmeda-bajo-hojas-de-oto%C3%B1o-en-199114176.jpg'>")
-
+    }
+    else 
+    alert(alerta)
 } else if (clima == "calor") {
-
-	var intensidadCalor = prompt("Hace mucho calor?")
+	var intensidadCalor = prompt("Hace mucho calor? (si/no)")
 	if (intensidadCalor == "si") {
-		var sudor = prompt("ya estas sudando?")
+		var sudor = prompt("Ya estas sudando? (si/no)")
 		if (sudor == "si") {
-			var ubicacionCalor = prompt("te encuentras en la Playa? ")
+			var ubicacionCalor = prompt("Te encuentras en la Playa? (si/no)")
 			if (ubicacionCalor == "si") {
+                alert(outfit)
 				document.write("<img src='https://c.pxhere.com/photos/46/42/beach_beer_bottle_drink_leisure_ocean_outdoors_person-1535449.jpg!d'>")
-			} else
+			} else if(ubicacionCalor=="no"){
+                alert(outfit)
 				document.write("<img src='https://i.ytimg.com/vi/6QyXtPSL9BI/maxresdefault.jpg'>")
-		} else
+            }
+            else
+            alert(alerta)
+		} else if (sudor=="no"){
+            alert(outfit)
 			document.write("<img src='https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/08/01200451/Panter-Hombre-sin-camisa-memes-1.jpg'>")
-	} else
+        }
+        else
+        alert(alerta)
+	} else if (intensidadCalor=="no") {
+    alert(outfit)
 		document.write("<img src='https://previews.123rf.com/images/budabar/budabar1708/budabar170800167/84942556-viejo-hombre-disfrutando-de-ba%C3%B1o-en-piscina-al-aire-libre-con-agua-caliente-en-verano.jpg'>")
-
+    }
+        else 
+        alert(alerta)
 } else if (clima == "frio") {
-	var intensidadFrio = prompt("te estas congelando?")
+	var intensidadFrio = prompt("Te estas congelando? (si/no)")
 	if (intensidadFrio == "si") {
-        var salirFrio = prompt("Seguro que quieres salir?")
-        if (salirFrio == "si"){
-            var pinwinos = prompt("estas viendo pingüinos?")
-            if (pinwinos == "si"){
-                document.write("<img src='https://static.vecteezy.com/system/resources/previews/000/849/517/non_2x/man-taking-penguin-pictures-photo.jpg'>")
-            } else
-              document.write("<img src='https://www.okchicas.com/wp-content/uploads/2015/10/21-imagenes-que-entienden-los-que-viven-con-frio-4.jpg'>")
-        }else
-         document.write("<img src='https://services.meteored.com/img/article/aire-frio-polar-vuelve-a-golpear-en-argentina-tiempo-pronostico-bajas-temperaturas-1654863085089_768.jpg'>")
-	}else
-    document.write("<img src='https://i.pinimg.com/originals/c8/c9/89/c8c9896798bd44989440999c391ae830.jpg'>")
-}
-else
-document.write("escribe algo valido porfa")
-
-
+		var salirFrio = prompt("Seguro que quieres salir? (si/no)")
+		if (salirFrio == "si") {
+			var pinwinos = prompt("Estas viendo pingüinos? (si/no)")
+			if (pinwinos == "si") {
+                alert(outfit)
+				document.write("<img src='https://static.vecteezy.com/system/resources/previews/000/849/517/non_2x/man-taking-penguin-pictures-photo.jpg'>")
+			} else if(pinwinos=="no"){
+                alert(outfit)
+				document.write("<img src='https://www.okchicas.com/wp-content/uploads/2015/10/21-imagenes-que-entienden-los-que-viven-con-frio-4.jpg'>")
+            }
+            else
+            alert(alerta)
+		} else if(salirFrio=="no") {
+            alert(outfit)
+			document.write("<img src='https://services.meteored.com/img/article/aire-frio-polar-vuelve-a-golpear-en-argentina-tiempo-pronostico-bajas-temperaturas-1654863085089_768.jpg'>")
+        }
+        else 
+        alert (alerta)
+	} else if(intensidadFrio=="no"){
+        alert(outfit)
+		document.write("<img src='https://i.pinimg.com/originals/c8/c9/89/c8c9896798bd44989440999c391ae830.jpg'>")
+    }
+    else 
+    alert(alerta)
+} else
+	alert(alerta)
+} 
+    
 
 
 
