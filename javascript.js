@@ -79,6 +79,7 @@ console.log(persona)  */
 // var clima = document.getElementById("idClima").value;
 // document.write("lo que escribiste fue "+ clima);
 // }
+var msgError = "Respuesta Invalida"
 
 /************LA TAREA ************/
 function start(){
@@ -172,57 +173,281 @@ if (clima == "lluvia") {
     setInterval("location.reload()",10000); 
 }
 
-    
+
+
+
+/********EJERCICIO 1 ******************/
+function ejercicio1(){
+var ask = prompt ("Eres Bellisimo/a?")
+if (ask=="si")
+    document.write("Ciertamente")
+    else if (ask =="no")
+    document.write("No te creo")
+    else
+    alert (msgError)
+    setInterval("location.reload()",10000); 
+}
+
+
+/****EJERCICIO 2 ************/
+function ejercicio2(){
+var numero = prompt("Ingrese un numero");
+var numero = parseInt(numero);
+if (numero % 2 == 0) {
+  alert("El numero es divisible entre 2");
+} else {
+  alert("El numero no es divisible entre 2");
+}
+setInterval("location.reload()",10000); 
+}
+
+
+
+/******EJERCICIO 3******** */
+function ejercicio3(){
+var numero = prompt("Introduce un número");
+if (numero % 2 == 0) {
+  alert("El número es par");
+} else {
+  alert("El número es impar");
+}
+setInterval("location.reload()",10000); 
+}
+
+/*****EJERCICIO 4******* */
+function ejercicio4(){
+var numero = prompt("Introduce un numero");
+if (numero == 1000){
+    alert("Ganastr un premio");
+} else {
+    alert("Lo sentimos, sigue participando")
+}
+setInterval("location.reload()",10000); 
+}
+
+
+
+/*********EJERCICIO 5 **********/
+function ejercicio5(){
+var numero1 = prompt("Introduce un número");
+var numero2 = prompt("Introduce un número");
+if (numero1 < numero2) {
+  alert("El número menor es " + numero1);
+} else if (numero2 < numero1) {
+  alert("El número menor es " + numero2);
+}   //Preguntar por que que marca que 10 es menor que 5
+setInterval("location.reload()",10000); 
+}
+
+
+/*********EJERCICIO 6 **********/
+function ejercicio6(){
+var numero1 = prompt("Introduce un número");
+var numero2 = prompt("Introduce un número");
+var numero3 = prompt("Introduce un número");
+if (numero1 > numero2 && numero1 > numero3) {
+  alert("El número mayor es " + numero1);
+} else if (numero2 > numero1 && numero2 > numero3) {
+  alert("El número mayor es " + numero2);
+} else if (numero3 > numero1 && numero3 > numero2) {
+  alert("El número mayor es " + numero3);
+} else {
+  alert("Los números son iguales");
+}
+setInterval("location.reload()",10000); 
+}
+
+
+
+/*********EJERCICIO 7 **********/
+function ejercicio7(){
+var dia = prompt("Introduce un día de la semana");
+if (dia == "lunes") {
+  alert("Hoy es lunes");
+} else if (dia == "viernes") {
+  alert("Hoy es viernes");
+} else if (dia == "sabado" || dia == "domingo") {
+  alert("Hoy es fin de semana");
+} else {
+  alert("Hoy no es lunes, viernes, sábado o domingo");
+}
+setInterval("location.reload()",10000); 
+}
+
+
+/*********EJERCICIO 8 **********/
+function ejercicio8(){
+var calificacion = prompt("Ingrese una calificación entre 1 y 10");
+if (calificacion < 1 || calificacion > 10) {
+  alert("Error: la calificación debe estar entre 1 y 10");
+} else if (calificacion < 6) {
+  alert("Reprobado");
+} else if (calificacion < 9) {
+  alert("Regular");
+} else if (calificacion < 10) {
+  alert("Bien");
+} else {
+  alert("Excelente");
+}
+setInterval("location.reload()",10000); 
+}
+
+
+/*********EJERCICIO 9 **********/
+function ejercicio9(){
+var total = 50;
+alert("Buenos dias, el helado cuesta 50 pesos");
+var topping = prompt("quieres un topping?");
+if (topping=="si") {
+    var toppingOreo = prompt("Queires topping de Oreo por 10 pesos?");
+    var toppingKitKat = prompt("Quieres topping de KitKat por 15 pesos?");
+    var toppingBrownie = prompt ("Quieres topping de Brownie por 20 pesos");
+    if (toppingOreo=="si" && toppingKitKat =="si" && toppingBrownie=="si"){
+        total = total + 10 + 15 + 20;
+        var existenciaOreo = prompt("Hay topping de oreo?")
+        var existenciaKitkat = prompt("Hay topping de KitKat?")
+        var existenciaBrownie = prompt("Hay topping de Brownie?")
+      //  alert("El total es "+ total);
+    } else if (toppingOreo=="si" && toppingKitKat =="si" && toppingBrownie=="no"){
+        total = total + 10 + 15;
+        var existenciaOreo = prompt("Hay topping de oreo?")
+        var existenciaKitkat = prompt("Hay topping de KitKat?")
+        // if (existenciaOreo =="si" && existenciaKitkat =="si") {
+        // total = total + 10 + 15;
+        // } else if (existenciaOreo =="si" && existenciaKitkat =="no"){
+        //     total= total +10;
+        // } else if (existenciaOreo =="no" && existenciaKitkat =="si"){
+        //     total= total + 15;
+        // } else if (existenciaOreo =="no" && existenciaKitkat =="no") {
+        //     alert("El total es "+ total);
+        // }
+      //  alert("El total es "+ total);
+    } else if (toppingOreo=="si" && toppingKitKat =="no" && toppingBrownie=="si"){
+        total = total + 10 + 20;
+        var existenciaOreo = prompt("Hay topping de oreo?")
+        var existenciaBrownie = prompt("Hay topping de Brownie?")
+       // alert("El total es "+ total);
+    } else if (toppingOreo=="no" && toppingKitKat =="si" && toppingBrownie=="si"){
+        total = total + 15 + 20;
+        var existenciaKitkat = prompt("Hay topping de KitKat?")
+        var existenciaBrownie = prompt("Hay topping de Brownie?")
+       // alert("El total es "+ total);
+    } else if (toppingOreo=="si" && toppingKitKat =="no" && toppingBrownie=="no"){
+        total = total + 10;
+        var existenciaOreo = prompt("Hay topping de oreo?")
+       // alert("El total es "+ total);
+    } else if (toppingOreo=="no" && toppingKitKat =="si" && toppingBrownie=="no"){
+        total = total + 15;
+        var existenciaKitkat = prompt("Hay topping de KitKat?")
+       // alert("El total es "+ total);
+    } else if (toppingOreo=="no" && toppingKitKat =="no" && toppingBrownie=="si") {
+        total = total + 20;
+        var existenciaBrownie = prompt("Hay topping de Brownie?")
+       // alert("El total es "+ total);
+    } else {
+        alert("El total es "+ total);
+    }
+   
+} else {
+    alert("El total es "+ total);
+}
+if (existenciaOreo =="no"){
+    total = total - 10;
+    //alert("El total es "+ total);
+}
+if (existenciaKitkat =="no"){
+    total = total - 15;
+    //alert("El total es "+ total);
+}
+if (existenciaBrownie=="no"){
+    total = total - 20
+    //alert("El total es "+ total);
+}
+alert("El total es de "+ total);
+}
+
+
+/*********EJERCICIO 10 **********/
+function ejercicio10(){
+var totalcurso = null;
+var curso = prompt("Cual curso estas tomando?");
+if (curso=="course"){
+    total = 4999*2;
+} else if (curso=="carrera"){
+    total = 3999*6;
+} else if (curso =="master"){
+    total = 2999*12;
+} else {
+    alert("Dato Invalido")
+}
+var beca = prompt("el usuario cuenta con una beca?")
+if (beca=="si"){
+    var tipoBeca = prompt("Cual beca tiene?")
+    if (tipoBeca=="facebook"){
+        total = total*.80;
+    }else if (tipoBeca =="google"){
+        total = total*.85;
+    }else if (tipoBeca=="jesua"){
+        total = total*.50;
+    }
+} else {
+    alert("El total a pagar es "+ total)
+}
+alert("El total a pagar es "+ total)
+setInterval("location.reload()",10000); 
+}
 
 
 
 
 
- 
-       
-        
-        
-//             document.write("ok pues usa esto")
-//             else 
-//                 document.write("ok este es tu outfit")
+// var total = 50;
+// alert("Buenos dias, el helado cuesta 50 pesos")
+// var topping = prompt("quieres un topping?")
+// if (topping=="si"){
+//     var toppingOreo = prompt("Quieres toppíng de oreo por 10 pesos?")
+//     if (toppingOreo =="si"){
+//         total= 50 + 10;
+//         var toppingKitKat = prompt ("quieres topping kitkat por 15 pesos?")
+//         if (toppingKitKat == "si"){
+//             total = total + 15;
+//             var toppingBrownie =prompt("Quieres topping de brownie por 20 pesos?")
+//             if (toppingBrownie=="si") {
+//                 total = total + 20;
+//                 alert (total);
+//             } else {
+//                 alert("El total es " + total)
 //             }
-//         else
-//             document.write("acuestese pues")
-//     }   else
-//             document.write("tons usa esto")
-    
-// } else if (clima == "calor") {
-//     var intensidadCalor = prompt("Hace mucho calor?")
-//     if (intensidadCalor == "si") {
-
-
-//         var ubicacionCalor = prompt("Estas en la playa?")
-//         if (ubicacionCalor = "si")
-//             document.write("lleguele a la playa pues")
-//         else
-//             document.write("ok tons ponte esto pal calor")
-//     } else { //else NO hace calor
-//         var sed = prompt("traes reseca la garganta?")
-//         if (sed = "si")
-//             document.write("quedese en la casa y tomese unas cawamas")
-//         else
-//             document.write("tomese una cokita en boldsa")
-//     }
-
-
-
-
-// } else if (clima == "frio") {
-//     var intensidadFrio = prompt("te estas congelando?")
-//     if (intensidadFrio = "si") {
-//         var pinwinos = prompt("estas viendo pinwinos?")
-//         if (pinwinos == "si")
-//             document.write("tan en el polo norte we")
+//         } else {
+//             var toppingBrownie =prompt("Quieres topping de brownie por 20 pesos?")
+//             if (toppingBrownie=="si") {
+//                 total = total + 20;
+//                 alert (total);
+//             } else {
+//                 alert("El total es " + total)
+//             }
+//         }
 //     } else {
-//         var salirFrio = prompt("Seguro que quieres salir?")
-//         if (salirFrio = "si")
-//             document.write("ta bien ponte esto")
-//         else
-//             document.write("mira ponte esto")
+//         var toppingKitKat = prompt ("quieres topping kitkat por 15 pesos?")
+//         if (toppingKitKat == "si"){
+//             total = total + 15;
+//             var toppingBrownie =prompt("Quieres topping de brownie por 20 pesos?")
+//             if (toppingBrownie=="si") {
+//                 total = total + 20;
+//                 alert (total);
+//             } else {
+//                 alert("El total es " + total)
+//             }
+//         } else {
+//             alert("El total es " + total) 
+//             var existenciaOreo = prompt("tienes Topping de oreo?")
+//             var existenciaKitkat = prompt("tienes topping de kitkat?")
+//             var existenciaBrownie =prompt("Tienes topping de Brownie?")
+//             if (existenciaOreo == "si" && existenciaKitkat =="si" && existenciaBrownie == "si"){
+//                 alert = (total)
+//             }       
+//         }
 //     }
-// }
+// } else {
+//     alert ("El total es 50 pesos")
+//    }
